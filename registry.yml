@@ -1,0 +1,21 @@
+server:
+  port: 8761
+
+eureka:
+  server:
+    enableSelfPreservation: true
+    peerEurekaNodesUpdateIntervalMs: 30000
+  instance:
+    preferIpAddress: true
+    leaseExpirationDurationInSeconds: 10
+    leaseRenewalIntervalInSeconds: 10
+  client:
+    region: default
+    registerWithEureka: true
+    fetchRegistry: true
+    eurekaServerPort: 8761
+    
+    eurekaServiceUrlPollIntervalSeconds: 30
+    
+    headlessService:
+      defaultZone: ${ALAUDA_EUREKA_DNS:eureka-hl-01.eureka--dev-space.svc.cluster.local}
