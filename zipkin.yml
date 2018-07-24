@@ -9,19 +9,20 @@ logging:
 
 zipkin:
   storage:
-    type: elasticsearch
-    elasticsearch:
-      hosts: http://localhost:9200
-      username: elastic
-      password: changeme
+    type: in-memory
+#     type: elasticsearch
+#     elasticsearch:
+#       hosts: http://localhost:9200
+#       username: elastic
+#       password: changeme
 
 ---
 spring.profiles: docker
 
 zipkin:
   storage:
-    type: elasticsearch
-    elasticsearch:
-      hosts: http://elasticsearch:9200
-      username: elastic
-      password: changeme
+#     type: elasticsearch
+#     elasticsearch:
+#       hosts: http://elasticsearch:9200
+#       username: elastic
+#       password: changeme
