@@ -9,7 +9,7 @@ logging:
 
 zipkin:
   storage:
-    type: in-memory
+    type: mem
 #     type: elasticsearch
 #     elasticsearch:
 #       hosts: http://localhost:9200
@@ -19,8 +19,8 @@ zipkin:
 ---
 spring.profiles: docker
 
-zipkin:
-  storage:
+# zipkin:
+#   storage:
 #     type: elasticsearch
 #     elasticsearch:
 #       hosts: http://elasticsearch:9200
