@@ -11,6 +11,21 @@ ribbon:
   ConnectTimeout: 20000
 
 zuul:
+  ratelimit:
+    key-prefix: piggy-metrics
+    enabled: true
+    behind-proxy: true
+    policy-list:
+      auth-service:
+        - limit: 2 #optional - request number limit per refresh interval window
+          quota: 120 #optional - request time limit per refresh interval window (in seconds)
+          refresh-interval: 60 #default value (in seconds)
+          type: #optional
+            - user
+            - origin
+            - url    
+    
+    
   ignoredServices: '*'
   host:
     connect-timeout-millis: 20000
