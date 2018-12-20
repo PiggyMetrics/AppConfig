@@ -1,6 +1,6 @@
 logging:
   level:
-    com.piggymetrics.account.client: DEBUG
+    com.piggymetrics.account.*: DEBUG
 
 security:
   oauth2:
